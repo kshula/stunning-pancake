@@ -1,12 +1,50 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS (optional) -->
+    <style>
+        body {
+            /* Set background image */
+            background-image: url("{% static 'images/image.jpg' %}");
+            /* Adjust background styles */
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh; /* Ensure full viewport height */
+            margin: 0; /* Remove default margin */
+            padding: 50px; /* Add padding for content */
+            text-align: center; /* Center-align content */
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for content */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, p {
+            color: #333; /* Dark text color */
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Blockchain Voting System</h1>
-    <p>This is the home page of our voting application.</p>
-    <p><a href="{% url 'register' %}">Register to Vote</a></p>
-    <p><a href="{% url 'vote' %}">Cast Your Vote</a></p>
+    <div class="container">
+        <h1>Block Chain Voting System</h1>
+        <p>This is the home page of our voting system.</p>
+
+        <!-- Button container -->
+        <div class="btn-container">
+            <a href="{% url 'register_voter' %}" class="btn btn-primary btn-lg">Register as Voter</a>
+            <a href="{% url 'cast_vote' %}" class="btn btn-success btn-lg">Cast Your Vote</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript (optional, for Bootstrap components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
