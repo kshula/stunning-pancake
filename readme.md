@@ -1,3 +1,5 @@
+![Example Image](images/blockchain.png)
+
 # Django Voting System
 
 This Django project implements an online voting system where users can register as voters, cast votes for presidential candidates, and view the election results.
